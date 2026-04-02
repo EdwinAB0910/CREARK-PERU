@@ -402,13 +402,22 @@ main h2 {
 
     .encabezado {
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 10px;
     }
 
     .nav {
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
         width: 100%;
+    }
+
+    .nav a {
+        font-size: 14px;
+        white-space: nowrap;
     }
 
     .servicios-contenedor {

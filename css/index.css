@@ -41,21 +41,39 @@ header {
     height: 15px;
     border-radius: 50%;
 
-    background: 
+    background:
         linear-gradient(45deg, transparent 47%, #222 47%, #222 53%, transparent 53%),
         linear-gradient(-45deg, transparent 47%, #222 47%, #222 53%, transparent 53%),
-        #777; 
-        
-    box-shadow: inset -1px -1px 2px rgba(175, 174, 171, 0.984), 
-                inset 1px 1px 1px rgba(175, 174, 171, 0.984);
+        #777;
+
+    box-shadow: inset -1px -1px 2px rgba(175, 174, 171, 0.984),
+        inset 1px 1px 1px rgba(175, 174, 171, 0.984);
     z-index: 1;
 }
 
-.logo::before { top: 8px; left: 8px; transform: rotate(150deg);}
-.logo::after { top: 8px; right: 8px; transform: rotate(120deg); } 
+.logo::before {
+    top: 8px;
+    left: 8px;
+    transform: rotate(150deg);
+}
 
-.bottom-left { bottom: 8px; left: 8px; transform: rotate(120deg); }
-.bottom-right { bottom: 8px; right: 8px; transform: rotate(150deg); }
+.logo::after {
+    top: 8px;
+    right: 8px;
+    transform: rotate(120deg);
+}
+
+.bottom-left {
+    bottom: 8px;
+    left: 8px;
+    transform: rotate(120deg);
+}
+
+.bottom-right {
+    bottom: 8px;
+    right: 8px;
+    transform: rotate(150deg);
+}
 
 .bottom-left {
     bottom: 8px;
@@ -88,7 +106,7 @@ nav a:hover {
 .menu-toggle {
     font-size: 36px;
     cursor: pointer;
-    color: #D9D9D9;
+    color: white;
     display: block;
     position: relative;
     z-index: 100;
@@ -405,19 +423,27 @@ nav a:hover {
         top: 60px;
     }
 
+    .nav a {
+        color: #D9D9D9;
+        padding-top: 5px;
+    }
+
     .menu-toggle {
         font-size: 28px;
     }
 
     /* HERO */
     .hero {
-        height: auto;
-        min-height: 100vh;
-        padding: 40px 15px;
+        height: 100vh;
+        min-height: 600px;
+        background-attachment: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .content {
-        padding-top: 80px;
+        padding-top: 0px;
     }
 
     .content h1 {
@@ -464,6 +490,59 @@ nav a:hover {
     .whatsapp-carrusel img {
         width: 25px;
         height: 25px;
+    }
+
+    .logo::before,
+    .logo::after,
+    .tornillo {
+        content: "";
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+
+        background:
+            linear-gradient(45deg, transparent 47%, #222 47%, #222 53%, transparent 53%),
+            linear-gradient(-45deg, transparent 47%, #222 47%, #222 53%, transparent 53%),
+            #777;
+
+        box-shadow: inset -1px -1px 2px rgba(175, 174, 171, 0.984),
+            inset 1px 1px 1px rgba(175, 174, 171, 0.984);
+        z-index: 1;
+    }
+
+    .logo::before {
+        top: 8px;
+        left: 8px;
+        transform: rotate(150deg);
+    }
+
+    .logo::after {
+        top: 8px;
+        right: 8px;
+        transform: rotate(120deg);
+    }
+
+    .bottom-left {
+        bottom: 8px;
+        left: 8px;
+        transform: rotate(120deg);
+    }
+
+    .bottom-right {
+        bottom: 8px;
+        right: 8px;
+        transform: rotate(150deg);
+    }
+
+    .bottom-left {
+        bottom: 8px;
+        left: 8px;
+    }
+
+    .bottom-right {
+        bottom: 8px;
+        right: 8px;
     }
 }
 
