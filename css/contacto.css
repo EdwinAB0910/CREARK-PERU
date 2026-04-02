@@ -93,7 +93,7 @@ label[for="modoOscuroToggle"] {
     height: 60px;
     background: linear-gradient(135deg, #bcd9d8, #dbe0e0, #d5d9ae);
     border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     transition: 0.3s;
 }
 
@@ -106,36 +106,6 @@ label[for="modoOscuroToggle"] {
     transform: scale(1.1);
 }
 
-.productos section:target {
-    animation: resaltar 3s ease;
-}
-
-@keyframes resaltar {
-    0% {
-        background: #ecf192;
-    }
-
-    50% {
-        background: #dff5d8;
-    }
-
-    100% {
-        background: transparent;
-    }
-}
-
-
-
-.imagencentral::before {
-    z-index: 1;
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-}
 /* contenedor */
 .menu-plantita {
     position: relative;
@@ -150,79 +120,6 @@ label[for="modoOscuroToggle"] {
 /* MOSTRAR al hacer click */
 #toggleMenu:checked+.btn-menu+.menu-opciones {
     display: block;
-}
-
-/* estilos links */
-.menu-opciones a {
-    display: block;
-    padding: 12px 20px;
-    text-decoration: none;
-    color: #333;
-}
-
-.menu-opciones a:hover {
-    background: #cec5c5;
-}
-
-.icono {
-    width: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
-}
-
-/* sección productos */
-
-.productos {
-    padding: 60px 10%;
-    background: rgb(226, 225, 225);
-}
-
-.titulo-productos {
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 32px;
-}
-
-/* contenedor */
-
-.productos-contenedor {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-}
-
-/* tarjeta */
-
-.producto {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center;
-    padding-bottom: 20px;
-    position: relative;
-}
-
-.producto img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-}
-
-.productos h2 {
-    margin: 0 0 25px 25px;
-}
-
-.producto p {
-    padding: 7.5px 15px;
-    font-size: 14px;
-    color: #555;
-}
-
-.producto:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
 }
 
 .footer {
@@ -341,9 +238,9 @@ main {
     flex: 1;
 }
 
-/* RESPONSIVO */
-/* TABLET */
-
+/* ========================= */
+/* TABLET (≤1024px) */
+/* ========================= */
 @media (max-width:1024px) {
 
     .encabezado {
@@ -354,145 +251,111 @@ main {
         font-size: 20px;
     }
 
-    .imagencentral {
-        height: 60vh;
-    }
-
-    .imagencentraltexto h2 {
-        font-size: 32px;
-    }
-
-    .slide img {
-        width: 200px;
-    }
-
-}
-
-/* CELULARES */
-/* ========================= */
-@media (max-width:768px) {
-
-    .footer-contenedor {
-        flex-direction: column;
-        text-align: center;
-        gap: 20px;
-    }
-
-    .footer-redes {
-        text-align: center;
-    }
-
-    .redes {
-        justify-content: center;
-    }
-
-}
-
-@media (max-width: 768px) {
-    .productos-contenedor {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .productos {
-        padding: 40px 5%;
-    }
-
-    .titulo-productos {
-        font-size: 26px;
-    }
-
-    .producto img {
-        height: 180px;
-    }
-}
-
-@media (max-width: 768px) {
-    .encabezado {
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: normal;
-    }
-
     .nav {
-        flex-direction: row;
-        margin-right: auto;
-    }
-
-    .menu-plantita {
-        margin-left: auto;
-        margin-bottom: center;
-    }
-
-    label[for="modoOscuroToggle"] {
-        margin-left: auto;
-        margin-right: 0;
-    }
-
-    .info {
-        align-items: right;
-    }
-
-    /* IMAGEN CENTRAL */
-
-    .imagencentral {
-        height: 50vh;
-        padding: 20px;
-
-    }
-}
-
-@media (max-width:768px) {
-
-    /* IMAGEN CENTRAL */
-
-    .imagencentral {
-        height: 50vh;
-        padding: 20px;
-    }
-
-    .imagencentraltexto h2 {
-        font-size: 26px;
-    }
-
-    /* CATALOGO */
-
-    .catalogo {
-        padding: 20px;
-    }
-
-    .slide img {
-        width: 160px;
-    }
-
-    /* FOOTER */
-
-    .footer {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-        padding: 15px;
-    }
-
-    .redes {
-        display: flex;
-        justify-content: center;
         gap: 15px;
     }
 
+    .footer {
+        padding: 30px 20px;
+    }
 }
 
+
 /* ========================= */
-/* CELULARES PEQUEÑOS */
+/* CELULARES (≤768px) */
 /* ========================= */
+@media (max-width:768px) {
+
+    /* HEADER */
+    .encabezado {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* NAV vertical */
+    .nav {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 15px;
+        padding: 5px 0;
+    }
+
+    /* BOTÓN DARK MODE */
+    label[for="modoOscuroToggle"] {
+        margin: 10px 0;
+    }
+
+    /* MAIN */
+    main {
+        padding: 20px 10px;
+    }
+
+    /* FOOTER */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .footer-contenedor {
+        gap: 10px;
+    }
+
+    /* REDES */
+    .redes {
+        justify-content: center;
+    }
+
+    /* WHATSAPP (más pequeño en móvil) */
+    .whatsapp-carrusel a {
+        width: 50px;
+        height: 50px;
+    }
+
+    .whatsapp-carrusel img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* CELULARES PEQUEÑOS (≤480px) */
 
 @media (max-width:480px) {
 
-    .imagencentraltexto h2 {
-        font-size: 22px;
+    /* LOGO */
+    .logotipo h1 {
+        font-size: 18px;
     }
 
-    .slide img {
-        width: 130px;
+    /* NAV */
+    .nav a {
+        font-size: 14px;
     }
 
+    /* FOOTER TEXTO */
+    .copyright {
+        font-size: 12px;
+    }
+
+    .frase {
+        font-size: 13px;
+    }
+
+    /* WHATSAPP aún más compacto */
+    .whatsapp-carrusel a {
+        width: 45px;
+        height: 45px;
+    }
+
+    .whatsapp-carrusel img {
+        width: 22px;
+        height: 22px;
+    }
 }
