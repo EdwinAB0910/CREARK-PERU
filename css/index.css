@@ -23,73 +23,49 @@ header {
 .logo {
     position: relative;
     font-weight: 600;
-    background: linear-gradient(135deg, #bcd9d8, #dbe0e0, #d5d9ae);
+    background: linear-gradient(135deg, #acafaf, #dbe0e0, #caccb7);
     border-radius: 10px;
     padding: 15px 25px;
-    color: rgb(157, 141, 102);
+    color: rgb(101, 122, 115);
     text-align: center;
     padding: 20px 35px;
     font-size: 25px;
 }
 
-/* Tornillos arriba */
 .logo::before,
-.logo::after {
+.logo::after,
+.tornillo {
     content: "";
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #666;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    box-shadow: inset 0 0 2px #000;
+
+    background: 
+        linear-gradient(45deg, transparent 47%, #222 47%, #222 53%, transparent 53%),
+        linear-gradient(-45deg, transparent 47%, #222 47%, #222 53%, transparent 53%),
+        #777; 
+        
+    box-shadow: inset -1px -1px 2px rgba(175, 174, 171, 0.984), 
+                inset 1px 1px 1px rgba(175, 174, 171, 0.984);
+    z-index: 1;
 }
 
-/* Arriba izquierda */
-.logo::before {
-    top: 5px;
-    left: 5px;
-}
+.logo::before { top: 8px; left: 8px; transform: rotate(150deg);}
+.logo::after { top: 8px; right: 8px; transform: rotate(120deg); } 
 
-/* Arriba derecha */
-.logo::after {
-    top: 5px;
-    right: 5px;
-}
-
-/* Tornillos abajo */
-.tornillo {
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    background: #666;
-    border-radius: 50%;
-    box-shadow: inset 0 0 2px #000;
-}
+.bottom-left { bottom: 8px; left: 8px; transform: rotate(120deg); }
+.bottom-right { bottom: 8px; right: 8px; transform: rotate(150deg); }
 
 .bottom-left {
-    bottom: 5px;
-    left: 5px;
+    bottom: 8px;
+    left: 8px;
 }
 
 .bottom-right {
-    bottom: 5px;
-    right: 5px;
+    bottom: 8px;
+    right: 8px;
 }
-
-/* Ranura del tornillo */
-.logo::before::after,
-.logo::after::after,
-.tornillo::after {
-    content: "";
-    position: absolute;
-    width: 6px;
-    height: 1px;
-    background: #222;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 
 nav a {
     text-decoration: none;
