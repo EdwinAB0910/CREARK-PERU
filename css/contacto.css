@@ -27,7 +27,6 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    margin-top: -10px;
 }
 
 .logotipo h1 {
@@ -78,7 +77,6 @@ label[for="modoOscuroToggle"] {
     font-size: 18px;
     cursor: pointer;
     margin-left: 15px;
-    margin-bottom: -10px;
 }
 
 /* MODO OSCURO */
@@ -112,11 +110,6 @@ label[for="modoOscuroToggle"] {
 .menu-plantita {
     position: relative;
     z-index: 1000;
-}
-
-/* ocultar checkbox */
-#toggleMenu {
-    display: none;
 }
 
 /* MOSTRAR al hacer click */
