@@ -28,7 +28,6 @@ header {
     padding: 15px 25px;
     color: rgb(101, 122, 115);
     text-align: center;
-    padding: 20px 35px;
     font-size: 25px;
 }
 
@@ -85,48 +84,10 @@ header {
     right: 8px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #D9D9D9;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.nav a {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-    padding-top: 20px;
-}
-
-nav a:hover {
-    color: #edc057;
-}
-
-.menu-toggle {
-    font-size: 36px;
-    cursor: pointer;
-    color: white;
-    display: block;
-    position: relative;
-    z-index: 100;
-}
-
-.menu-toggle :hover {
-    color: #edc057;
-}
-
-#menu-toggle {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
 .nav {
     font-weight: 900;
     display: flex;
-    gap: 30px;
+    gap: 25px;
     position: absolute;
     top: 70px;
     right: 20px;
@@ -139,6 +100,46 @@ nav a:hover {
     pointer-events: none;
 
     transition: all 0.4s ease;
+}
+
+nav a {
+    text-decoration: none;
+    color: #D9D9D9;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav a {
+    text-align: center;
+    padding-bottom: 5px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    padding-top: 20px;
+}
+
+nav a:hover {
+    color: #efc58a;
+}
+
+.menu-toggle {
+    font-size: 36px;
+    cursor: pointer;
+    color: white;
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+.menu-toggle :hover {
+    color: #ed8f3e;
+}
+
+#menu-toggle {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
 
 #menu-toggle:checked+.menu-toggle+.nav {
@@ -413,8 +414,8 @@ nav a:hover {
     }
 
     .logo {
-        font-size: 18px;
-        padding: 10px 20px;
+        font-size: 16px;
+        padding: 15px 30px;
     }
 
     /* MENÚ */
@@ -424,8 +425,11 @@ nav a:hover {
     }
 
     .nav a {
-        color: #D9D9D9;
+        color: #81decb;
         padding-top: 5px;
+        background: linear-gradient(to right,
+                rgba(228, 230, 224, 0.918),
+                transparent, rgba(228, 230, 224, 0.918));
     }
 
     .menu-toggle {
