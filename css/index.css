@@ -21,14 +21,24 @@ header {
 }
 
 .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     position: relative;
     font-weight: 600;
     background: linear-gradient(135deg, #acafaf, #dbe0e0, #caccb7);
     border-radius: 10px;
-    padding: 15px 25px;
+    padding: 15px 20px;
     color: rgb(101, 122, 115);
     text-align: center;
     font-size: 25px;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 5px;
 }
 
 .logo::before,
@@ -105,7 +115,7 @@ header {
 nav a {
     text-decoration: none;
     color: #D9D9D9;
-    font-size: 14px;
+    font-size: 20px;
     transition: 0.3s;
 }
 
@@ -125,7 +135,7 @@ nav a:hover {
 .menu-toggle {
     font-size: 36px;
     cursor: pointer;
-    color: white;
+    color: rgb(217, 209, 209);
     display: block;
     position: relative;
     z-index: 100;
@@ -181,7 +191,7 @@ nav a:hover {
 .hero {
     width: 100%;
     height: 100vh;
-    background: url("../img/imagenfondo.jpg") center/cover no-repeat;
+    background: url("../img/imagendefondo.jpeg") center/cover no-repeat;
     filter: brightness(1.4);
     display: flex;
     flex-direction: column;
@@ -259,12 +269,12 @@ nav a:hover {
     list-style: none;
     position: relative;
     border: 3px solid;
-    border-image: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0, #ff0080) 1;
+    border-image: linear-gradient(135deg, #9eabc8, #5a60cb, #637ba6, #4e61b9) 1;
 }
 
 .card:hover {
     background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 25px rgba(255, 0, 128, 0.3);
+    box-shadow: 0 8px 25px #052e4b;
 }
 
 .card-title {
@@ -272,8 +282,8 @@ nav a:hover {
     cursor: pointer;
     font-weight: 700;
     font-size: 16px;
-    color: #00ff88;
-    background: rgba(0, 0, 0, 0.3);
+    color: #052e4b;
+    background: rgba(174, 170, 170, 0.795);
     transition: all 0.3s ease;
     display: flex;
     align-items: center;
@@ -281,13 +291,8 @@ nav a:hover {
     user-select: none;
 }
 
-.card-title:hover {
-    background: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0);
-    color: white;
-}
-
 .card[open] .card-title {
-    background: linear-gradient(135deg, #ff0080, #ff8c00, #40e0d0);
+    background: #052e4b;
     color: white;
 }
 
@@ -334,7 +339,7 @@ nav a:hover {
 
 .social a:hover {
     opacity: 1;
-    color: #4f7979;
+    color: #79b3b3;
     transform: scale(1.2);
 }
 
@@ -342,7 +347,7 @@ nav a:hover {
     content: "";
     width: 2px;
     height: 200px;
-    background: #a7a674;
+    background: #58b67c;
     margin-bottom: 15px;
     opacity: 0.6;
 }
@@ -350,7 +355,7 @@ nav a:hover {
 .line {
     width: 2px;
     height: 80px;
-    background: #a7a674;
+    background: #58b67c;
     margin-bottom: 15px;
 }
 
@@ -418,6 +423,12 @@ nav a:hover {
         padding: 15px 30px;
     }
 
+    .logo img {
+        width: 80px;
+        height: auto;
+        margin-bottom: 5px;
+    }
+
     /* MENÚ */
     .nav {
         right: 10px;
@@ -425,8 +436,9 @@ nav a:hover {
     }
 
     .nav a {
-        color: #81decb;
-        padding-top: 5px;
+        font-size: 16px;
+        color: #6e2017;
+        padding-top: 1px;
         background: linear-gradient(to right,
                 rgba(228, 230, 224, 0.918),
                 transparent, rgba(228, 230, 224, 0.918));
